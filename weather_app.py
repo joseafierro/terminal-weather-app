@@ -11,6 +11,7 @@ import urllib.request
 GEO_URL = "https://geocoding-api.open-meteo.com/v1/search"
 FORECAST_URL = "https://api.open-meteo.com/v1/forecast"
 __version__ = "1.0.0"
+ATTRIBUTION = "Weather data by Open-Meteo.com | https://open-meteo.com/"
 
 WEATHER_CODE = {
     0: "Clear sky",
@@ -302,6 +303,7 @@ def main():
 
     print_current(data, place, args.units)
     print_forecast(data, args.units)
+    print(f"\n{ATTRIBUTION}")
 
 
 if __name__ == "__main__":
